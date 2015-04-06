@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:SqlDataSource ID="SqlLFGData" runat="server" ConnectionString="<%$ ConnectionStrings:db_jimmy_HW7_LFG %>" DeleteCommand="DELETE FROM [jimmy_HW7_LFG] WHERE [UID] = @UID" InsertCommand="INSERT INTO [jimmy_HW7_LFG] ([GameID], [Nickname], [Server], [Class], [Rank], [AP], [Guild], [Language], [TimeAvailable]) VALUES (@GameID, @Nickname, @Server, @Class, @Rank, @AP, @Guild, @Language, @TimeAvailable)" SelectCommand="SELECT * FROM [jimmy_HW7_LFG]" UpdateCommand="UPDATE [jimmy_HW7_LFG] SET [GameID] = @GameID, [Nickname] = @Nickname, [Server] = @Server, [Class] = @Class, [Rank] = @Rank, [AP] = @AP, [Guild] = @Guild, [Language] = @Language, [TimeAvailable] = @TimeAvailable WHERE [UID] = @UID">
+        <asp:SqlDataSource ID="SqlLFGData" runat="server" ConnectionString="<%$ ConnectionStrings:db_jimmy_HW7_LFG %>" DeleteCommand="DELETE FROM [jimmy_HW7_LFG] WHERE [UID] = @UID" InsertCommand="INSERT INTO [jimmy_HW7_LFG] ([GameID], [Nickname], [Server], [Class], [Rank], [AP], [Guild], [Language], [TimeAvailable]) VALUES (@GameID, @Nickname, @Server, @Class, @Rank, @AP, @Guild, @Language, @TimeAvailable)" SelectCommand="SELECT * FROM [jimmy_HW7_LFG] WHERE ([UID] = @UID)" UpdateCommand="UPDATE [jimmy_HW7_LFG] SET [GameID] = @GameID, [Nickname] = @Nickname, [Server] = @Server, [Class] = @Class, [Rank] = @Rank, [AP] = @AP, [Guild] = @Guild, [Language] = @Language, [TimeAvailable] = @TimeAvailable WHERE [UID] = @UID">
             <DeleteParameters>
                 <asp:Parameter Name="UID" Type="Int32" />
             </DeleteParameters>
@@ -25,6 +25,9 @@
                 <asp:Parameter Name="Language" Type="String" />
                 <asp:Parameter Name="TimeAvailable" Type="String" />
             </InsertParameters>
+            <SelectParameters>
+                <asp:QueryStringParameter Name="UID" QueryStringField="UID" Type="Int32" />
+            </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="GameID" Type="String" />
                 <asp:Parameter Name="Nickname" Type="String" />
@@ -38,6 +41,7 @@
                 <asp:Parameter Name="UID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:Label ID="lbl_deleted" runat="server"></asp:Label>
         <br />
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="UID" DataSourceID="SqlLFGData" Height="50px" Width="125px">
             <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
