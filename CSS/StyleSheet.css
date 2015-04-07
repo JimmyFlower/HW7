@@ -15,8 +15,7 @@
 }
 
 #header_container {
-    background-color: none;
-    width:60%;
+  width:60%;
     min-width:850px;   
 }
 
@@ -26,7 +25,6 @@
     display:block;
     padding:4px;
     background-color:#ed3951;
-    width:100%;
     min-width:850px;
     height:30px;
     clear:both;
@@ -139,3 +137,100 @@
     color:#f23535
 }
 
+/* Gridview styling*/
+
+.gridview {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    
+}
+
+.gridview th {
+    text-align:left;
+    padding:10px 0px;
+    width:120px;
+    color:#FFFFFF;
+    font-weight:500;
+    font-size:1.2em;
+    border:none;
+}
+
+.gridview td {
+    text-align:left;
+    font-size:1.2em;
+    padding:15px 10px 15px 0px;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+
+.gridview a {
+    text-align:right;
+    color:#b00000;
+}
+    
+/* End Gridview styling*/
+
+/* Formview styling*/
+
+td {
+    font-size:1.1em;
+    padding:15px 10px 15px 0px;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+
+td.search {
+    border:none;
+    font-size:1.1em;
+    padding:5px 0px 0px 0px;
+}
+
+td.left_column {
+    text-align:left;
+    padding:5px;
+    width:150px;
+    color:#FFFFFF;
+    background-color:#a1cee1;
+}
+
+td.right_column {
+    text-align:left;
+    padding-left:5px;
+    width:400px;
+}
+
+.textbox {
+    border:1px solid lightgray;
+    width:380px;
+}
+
+/* End Formview styling*/
+
+/* Button styling*/
+
+.button {
+    border:1px solid #696969;
+    background-color:#FFFFFF;
+    color:#b00000;
+    margin:5px;
+    padding:5px;
+    width:100px;
+}
+
+.DetailsButtons {
+    text-align:center;
+    padding-top:15px;
+}
+
+/* End Button styling*/
+
+.validationError {
+    color:red;
+    float:left;
+    clear:both;
+}
+
+.lbl_notification {
+    text-align:center;
+}
