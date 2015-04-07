@@ -1,0 +1,236 @@
+﻿body {
+    font-family:Arial, sans-serif;
+    background-color:#6796bf;
+    line-height:1;
+  
+}
+
+#content {
+    background-color:#FFFFFF;
+    width:100%;
+    min-width:850px;
+    padding:0;
+    margin:0;
+    border:1px solid black;
+}
+
+#header_container {
+  width:60%;
+    min-width:850px;   
+}
+
+/* Menu styling*/
+
+#menu_container {
+    display:block;
+    padding:4px;
+    background-color:#ed3951;
+    min-width:850px;
+    height:30px;
+    clear:both;
+    border-bottom:1px solid #b00000;
+        -webkit-box-sizing:border-box; 
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+}
+
+#menu {
+    display:block;
+    float:left;
+}
+
+#menu_Master {
+    width:auto;
+    float:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+    background-color:#b00000;
+}
+
+#menu_Master li a {
+    display:block;
+    padding:8px 15px ;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:normal;
+    color:white;
+    background-color:#d70e0e;
+    border-right:1px solid white    ;
+}
+
+
+
+#login_status {
+    float: right;
+    display:block;
+    padding:8px 15px !important;
+    text-decoration:none;
+    font-weight:normal;
+    color:white;
+    background-color:#6796bf;
+}
+
+#login_status a {
+    text-decoration:underline;
+    font-weight:normal;
+    color:white;
+}
+
+
+
+#img_bg {
+    padding:0;
+    margin:0;
+}
+
+#main_container {
+    clear:both;
+    min-height:300px;
+    padding:20px 50px;
+    align-content:center;
+}
+
+#NYAN {
+    color:red;
+
+    text-transform:uppercase;
+}
+
+#LFG {color:pink;
+    text-transform:uppercase;
+}
+
+.image {
+    width:90%;
+    display:block;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+#contact_container {
+    padding-left:20px;
+}
+
+#contact_table_container {
+    padding-left:20px;
+}
+
+#contact_table {
+    align-content:center;
+}
+
+#contact_buttons {
+    width:550px;
+    text-align:center;
+}
+
+#footer {
+    text-align:center;
+    font-size:.9em;
+    font-weight:300;
+    margin:0;
+    padding-bottom:25px;
+    clear:both;
+    color:#f23535
+}
+
+/* Gridview styling*/
+
+.gridview {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    
+}
+
+.gridview th {
+    text-align:left;
+    padding:10px 0px;
+    width:120px;
+    color:#FFFFFF;
+    font-weight:500;
+    font-size:1.2em;
+    border:none;
+}
+
+.gridview td {
+    text-align:left;
+    font-size:1.2em;
+    padding:15px 10px 15px 0px;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+
+.gridview a {
+    text-align:right;
+    color:#b00000;
+}
+    
+/* End Gridview styling*/
+
+/* Formview styling*/
+
+td {
+    font-size:1.1em;
+    padding:15px 10px 15px 0px;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+
+td.search {
+    border:none;
+    font-size:1.1em;
+    padding:5px 0px 0px 0px;
+}
+
+td.left_column {
+    text-align:left;
+    padding:5px;
+    width:150px;
+    color:#FFFFFF;
+    background-color:#a1cee1;
+}
+
+td.right_column {
+    text-align:left;
+    padding-left:5px;
+    width:400px;
+}
+
+.textbox {
+    border:1px solid lightgray;
+    width:380px;
+}
+
+/* End Formview styling*/
+
+/* Button styling*/
+
+.button {
+    border:1px solid #696969;
+    background-color:#FFFFFF;
+    color:#b00000;
+    margin:5px;
+    padding:5px;
+    width:100px;
+}
+
+.DetailsButtons {
+    text-align:center;
+    padding-top:15px;
+}
+
+/* End Button styling*/
+
+.validationError {
+    color:red;
+    float:left;
+    clear:both;
+}
+
+.lbl_notification {
+    text-align:center;
+}
