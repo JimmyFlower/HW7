@@ -1,0 +1,61 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form" runat="server">
+        <div id="content">
+           <div id="header_container">
+               <asp:Image ID="img_bg" runat="server" ImageUrl="~/CSS/Images/GW.jpg" Height="366px" />
+            </div> <!-- End the header_container div -->
+    
+            <div id="menu_container">
+                <div id="menu">
+                    <asp:Menu ID="menu_Master" runat="server" Orientation="Horizontal" StaticSubMenuIndent="15px">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/gamers.aspx" Text="Gamers" Value="Gamers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/gamerlist.aspx" Text="gamerlist" Value="Admingamer">
+                                <asp:MenuItem NavigateUrl="~/Admin/newgamer.aspx" Text="Add a New Member" Value="Add a New Member "></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Manage Users" Value="Manage Users">
+                                <asp:MenuItem Text="View Users" Value="View Users" NavigateUrl="siteManger/users.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Add a New User" Value="Add a New User" NavigateUrl="siteManger/add_user.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Edit/Add Role" Value="Edit/Add Role" NavigateUrl="siteManger/roles.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Search.aspx" Text="Search" Value="Search"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div> <!-- End the menu div -->
+
+                <div id="login_status">
+                    <asp:Label ID="lbl_currentTime" runat="server" Text=""></asp:Label> | 
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </div> <!-- End the login _status div -->
+            </div> <!-- End the menu_container div -->
+
+            <div id="main_container">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div> <!-- End the main_container div -->
+
+            <div id="footer_container">
+                <div id="footer">
+                    &copy; 2015 MSCI:3300 - Software Design and Development - Jimmy
+                </div>
+            </div> 
+        </div> 
+    </form>
+</body>
+</html>
