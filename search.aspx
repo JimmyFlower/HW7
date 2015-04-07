@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title></title><link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -45,7 +45,12 @@
         <%Else%>Search by Class or Rank:&nbsp;&nbsp;&nbsp; 
         <asp:TextBox ID="tb_search2" runat="server"></asp:TextBox>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UID" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UID" DataSourceID="SqlDataSource1"
+            Gridlines="None"
+            CssClass="cssgridview"
+            AlternatingRowStyle-CssClass="alt"
+            PagerStyle-CssClass="pgr"
+        >
             <Columns>
                 <asp:BoundField DataField="UID" HeaderText="UID" InsertVisible="False" ReadOnly="True" SortExpression="UID" />
                 <asp:BoundField DataField="GameID" HeaderText="GameID" SortExpression="GameID" />

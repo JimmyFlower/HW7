@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title></title><link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -42,8 +42,20 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="UID" DataSourceID="SqlLFGData" Height="50px" Width="125px" DefaultMode="Insert">
+        <asp:DetailsView ID="New1" runat="server" AutoGenerateRows="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="UID" DataSourceID="SqlLFGData" Height="50px" Width="125px" DefaultMode="Insert" HeaderText="New Player"
+	      CssClass="cssdetailsview"
+              HeaderStyle-CssClass="header"
+              FieldHeaderStyle-CssClass="fieldheader"
+              ItemStyle-CssClass="item"
+              AlternatingRowStyle-CssClass="altrow"
+              CommandRowStyle-CssClass="command"
+              PagerStyle-CssClass="pager">
             <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+
+        
+
+
+
             <Fields>
                 <asp:BoundField DataField="UID" HeaderText="UID" InsertVisible="False" ReadOnly="True" SortExpression="UID" />
                 <asp:BoundField DataField="GameID" HeaderText="GameID" SortExpression="GameID" />
